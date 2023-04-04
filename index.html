@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+    <link rel="icon" href="jantar.png">
+    <title>Cálculo IMC</title>
+    
+</head>
+<body>
+        <div class="container">
+            <form id="calculadora">
+                <div class="form_header">
+                    <h1>Calculadora de IMC</h1>
+                    <i id="mode-icon" class="fa-solid fa-cloud-sun"></i>
+                </div>
+            
+                <div id="inputs">
+                    <div class="input-box">
+                        <label for="altura">
+                            Informe sua altura (cm)
+                            <div class="input-field">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                                <input type="text" id="altura" placeholder="Altura (ex.: 1.70)">
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="peso">
+                            Informe seu peso (kg)
+                            <div class="input-field">
+                                <i class="fa-solid fa-weight-hanging"></i>
+                                <input type="text" id="peso" placeholder="Peso (ex.: 67.5)">
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="calcular" onclick="imc()">
+                    Calcular
+                </button>
+                   
+
+            </form>
+            <div class="table">
+                <div class="top">
+                    <div class="abaixo18" id="abaixo18">
+                        <p>Abaixo de 18.5</p>
+                        <span>Abaixo do peso</span>
+                    </div>
+                    <div class="entre18" id="entre18">
+                        <p>Entre 18.5 e 25</p>
+                        <span>Normal</span>
+                    </div>
+                    <div class="entre25" id="entre25">
+                        <p>Entre 25 e 29.9</p>
+                        <span>Sobrepeso</span>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="entre30" id="entre30">
+                        <p>Entre 30 e 34.9</p>
+                        <span>Obesidade grau I</span>
+                    </div>
+                    <div class="entre35" id="entre35">
+                        <p>Entre 35 e 39.9</p>
+                        <span>Obesidade grau II</span>
+                    </div>
+                    <div class="acima40" id="acima40">
+                        <p>Acima de 40</p>
+                        <span>Obesidade grau III</span>
+                    </div>
+                </div>
+
+                <div class="resultado-hidden" id="hidden-resultado">
+                    <h2>ESSE É SEU RESULTADO</h2>
+                    <p id="result"></p>
+                </div>
+
+            </div>
+
+        </div>
+    
+        <script src="./imc.js"></script>
+   
+   
+</body>
+</html>
